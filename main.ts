@@ -77,6 +77,10 @@ radio.onReceivedNumber(function (receivedNumber) {
             . # # # .
             `)
         Baile1()
+    } else if (receivedNumber == 5) {
+        Despacito()
+    } else {
+        music.stopAllSounds()
     }
 })
 function Feliz () {
@@ -102,7 +106,6 @@ function Feliz () {
     Inicio()
 }
 function Baile1 () {
-    Despacito()
     Feliz()
     Caminar_adelante()
     Feliz()
@@ -353,7 +356,6 @@ basic.showLeds(`
     # . . . .
     . . . . .
     `)
-basic.showIcon(IconNames.Yes)
 Inicio()
 strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Blue))
